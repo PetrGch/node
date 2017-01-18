@@ -1,4 +1,5 @@
-screencast/node-v6.9.4/
-screencast/npm-server/
-screencast/npmmodget/node_modules/
-
+/**/node-v6.9.4/
+/**/npm-server/
+/**/npmmodget/node_modules/
+/**/.idea/
+/**/**/node_modules/
