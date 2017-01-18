@@ -1,10 +1,24 @@
-var user = require('./user');               // in local scope
+var User = require('./user');               // in local scope
 // require('./user');                          // in global scope
+var log = require('logger')(module);
+var db = require('db');
+db.connect();
 
-var vasya = new user.User('Vasya');         // in local scope
-var petr = new user.User('Petr');           // in local scope
+function run() {
+    var vasya = new User('Vasya');         // in local scope
+    var petr = new User('Petr');           // in local scope
 
-// var vasya = new User('Vasya');         // in global scope
-// var petr = new User('Petr');           // in global scope
+    // var vasya = new User('Vasya');         // in global scope
+    // var petr = new User('Petr');           // in global scope
 
-vasya.hello(petr);
+    vasya.hello(petr);
+}
+
+
+if (module.parent) {
+    exports.run = run;
+} else {
+    run();
+}
+
+log('phrases');
