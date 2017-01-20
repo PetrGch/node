@@ -39,3 +39,19 @@ example: `NODE_PATH=. node <name>.js`
 
 ### Lesson 
 #### NPM
+
+Add modules into NPM 
+
+To make it possible you need:
+- vreate file `package.json` by hand or due to command in **cl** `npm init` 
+- add user `npm add user`
+- publish module in central database `npm publish`
+- to see all npm comand type `npm help`
+- to update module type `npm up`
+
+**Package.json**
+- main set the point of enter to the package
+
+### Lesson 3
+#### Module **util** and how to use it
+
