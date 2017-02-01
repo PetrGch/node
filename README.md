@@ -55,3 +55,22 @@ To make it possible you need:
 ### Lesson 3
 #### Module **util** and how to use it
 
+nothing concrete 
+
+### Lesson 4
+#### Debugging 
+
+module **supervisor** listen all files' changes and restart server if it necessary
+To install **supervisor** globally: `npm i -g supervisor`
+To start **supervisor** just type `supervisor <filename>` instead of `node <filename>`  
+
+Another tool is `node debug`
+
+use word `debugger` in your code to stop code and watch some details;
+To run with debug `node debug <filename>`
+Also you can use `help` and `cont` - to continue running code and `repl` - to use console
+
+Another tool is **node-inspector**
+
+To install it `npm i -g node-inspector`
+Start node with parameter `--debug` full command is `node --debug <filename>` 

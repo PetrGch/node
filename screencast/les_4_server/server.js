@@ -17,7 +17,8 @@ http.createServer(function(req, res) {
     var urlPars = url.parse(req.url, true);
 
     // console.log(urlPars);
-    console.log(req.headers);
+    // console.log(req.headers);
+    debugger;
 
     if (urlPars.pathname === '/echo' && urlPars.query.message) {
         res.setHeader('Cache-control', 'no-cache');
@@ -27,4 +28,6 @@ http.createServer(function(req, res) {
         res.statusCode = 404;
         res.end('page is not found');
     }
+
 }).listen(1337, '127.0.0.1');
+console.log('console is running');
