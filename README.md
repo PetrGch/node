@@ -74,3 +74,20 @@ Another tool is **node-inspector**
 
 To install it `npm i -g node-inspector`
 Start node with parameter `--debug` full command is `node --debug <filename>` 
+
+
+### Lesson 11
+#### Process or pass parameters into script through cls
+ 
+Three ways to do it:
+
+- To add in configuration file next lines: if you using IDE just add to the _Application parameters_ field `port=3000`
+and to get it in the js code type `process.argv`. You will get array with parameters.
+- Almost the same way is to use module **Optimist**. To more information follow to the link [optimist](https://github.com/substack/node-optimist)
+- Using **Variable environments** (the best way on my point of view)
+through IDE
+    - add to the configuration file, to the field _Environment variables_ line `NODE_ENV` with value `development` or `production`
+through CLS (Unix)
+    - type to the terminal:
+        - `export NODE_ENV= [value]`
+        - other lines `supervisor -- <file name> -- [options]`

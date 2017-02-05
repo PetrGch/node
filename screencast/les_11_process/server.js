@@ -1,9 +1,13 @@
 var http = require('http');
-
-
+var opts = require('optimist').argv;
 
 http.createServer(function(req, res) {
 
-    res.end('The server is running!')
+    if (process.env.NODE_ENV == "production") {
+        res.end('The server is running in production!');
+    } else {
+        res.end('Development');
+    }
 
-}).listen(3000);
+
+}).listen(opts.port);
